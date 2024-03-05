@@ -1,0 +1,21 @@
+void rotateArr(int arr[], int d, int n){
+        // code here
+        d=d%n;
+        int gau[d];
+        for(int i=0;i<n;i++)
+        {
+            if(i<d)
+            {
+                gau[i]=arr[i];
+            }
+            else 
+            {
+                
+                arr[i-d]=arr[i];
+            }
+        }
+        for(int i=0;i<d;i++)
+        {
+            arr[n-d+i]=gau[i];
+        }
+    }
